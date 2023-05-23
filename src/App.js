@@ -3,7 +3,7 @@
 // import Reusable from "./Materi/Reusable";
 // import Rendering from "./Materi/Rendering";
 // import Form from "./Materi/Form";
-import FormValidation from "./Task"
+import FormValidation from "./Task/FormValidation"
 
 function App() {
   return (
