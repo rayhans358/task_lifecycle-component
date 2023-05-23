@@ -1,0 +1,38 @@
+$semiblack: #131811;
+$blue: #2196f3;
+$red: firebrick;
+
+.btn {
+  border: 2px solid $semiblack;
+  background-color: white;
+  color: $semiblack;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-info {
+  border-color: $blue;
+  color: dodgerblue;
+  border-radius: 6px;
+
+  &:hover {
+    background: $blue;
+    color: white;
+  }
+}
+
+.btn-danger {
+  border-color: $red;
+  color: $red;
+  border-radius: 6px;
+
+  &:hover {
+    background: $red;
+    color: white;
+  }
+}
+
+.title {
+  color: $red;
+}
