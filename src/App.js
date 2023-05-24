@@ -4,8 +4,8 @@
 // import Rendering from "./Materi/Rendering";
 // import Form from "./Materi/Form";
 // import FormValidation from "./Task/FormValidation"
-// import Lifecycle from "./Materi/Lifecycle";
-import StylingComponent from "./Task/StylingComponent";
+// import StylingComponent from "./Task/StylingComponent";
+import Lifecycle from "./Materi/Lifecycle";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
       {/* <Rendering/> */}
       {/* <Form/> */}
       {/* <FormValidation/> */}
-      <StylingComponent />
-      {/* <Lifecycle /> */}
+      {/* <StylingComponent /> */}
+      <Lifecycle />
     </div>
   );
 }
