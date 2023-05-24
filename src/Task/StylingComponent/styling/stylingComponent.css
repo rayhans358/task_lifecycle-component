@@ -1,0 +1,20 @@
+.introduce {
+  background-color:#fdc300;
+}
+
+.border {
+  background-color: #fa8300;
+  border-radius: 15px;
+}
+.border:hover {
+  background-color: tomato;
+}
+
+.formm{
+  width: 500px;
+}
+
+.button{
+  width: 500px;
+  margin-left:425px;
+}
