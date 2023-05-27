@@ -10,7 +10,6 @@ export default class LifecycleComponent extends React.Component {
     return (
       <>
       <NavbarSection/>
-      {/* <ContentContainer/> */}
       <NewsComponent/>
       </>
     )

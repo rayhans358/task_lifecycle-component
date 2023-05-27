@@ -1,7 +1,9 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styling/StylingLifecycle.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
+// Another method without class component
 const NavbarSection = () => {
   return (
     <div className='StylingComponent'>

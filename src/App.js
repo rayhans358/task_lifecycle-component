@@ -6,7 +6,8 @@
 // import FormValidation from "./Task/FormValidation"
 // import StylingComponent from "./Task/StylingComponent";
 // import Lifecycle from "./Materi/Lifecycle";
-import LifecycleComponent from "./Task/LifecycleComponent";
+// import WithoutComponent from "./Task/LifecycleComponent/WithoutComponent"
+import WithComponent from "./Task/LifecycleComponent/WithComponent";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <FormValidation/> */}
       {/* <StylingComponent /> */}
       {/* <Lifecycle /> */}
-      <LifecycleComponent/>
+      {/* <WithoutComponent/> */}
+      <WithComponent/>
     </div>
   );
 }

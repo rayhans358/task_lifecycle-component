@@ -1,14 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
-
-const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=0f7b330cb3e047c0b412d11043ea08c3`;
+import { envVars } from '../../../../config';
 
 const NewsComponent = () => {
+  const apiUrl = `${envVars.apiUrl}&apiKey=${envVars.apiKey}`;
+
   const [newsArticles, setNewsArticles] = useState([]);
   const newsContRef = useRef(null);
+  const [searchQuery, setSearchQuery] = useState("");
   
   useEffect(() => {
     const callAPI = () => {
-      fetch(apiUrl)
+      fetch(`${apiUrl}`)
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -24,7 +26,10 @@ const NewsComponent = () => {
     };
   
     callAPI();
-  }, []);
+    return() => {
+      console.log("unmounted");
+    }
+  }, [apiUrl]);
 
   const renderArticles = (articles) => {
     const newsCont = newsContRef.current;
@@ -60,11 +65,16 @@ const NewsComponent = () => {
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value.toLowerCase();
+    setSearchQuery(searchTerm);
     const filteredArticles = newsArticles.filter((article) =>
       article.title.toLowerCase().includes(searchTerm)
     );
     renderArticles(filteredArticles);
   };
+
+  useEffect(() => {
+    console.log({searchQuery});
+  }, [searchQuery])
 
   return (
     <div className="container">
@@ -83,7 +93,7 @@ const NewsComponent = () => {
               placeholder="Search News"
               aria-label="Search News"
               aria-describedby="button-addon2"
-              onKeyUp={handleSearch} // Menggunakan event listener onKeyUp untuk live search
+              onKeyUp={handleSearch}
             />
             <button className="btn btn-primary" type="button" id="button-addon2">
               Search
